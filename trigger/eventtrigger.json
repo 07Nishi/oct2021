@@ -1,0 +1,25 @@
+{
+	"name": "eventtrigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "copy_pipeline",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/source/blobs/input/",
+			"blobPathEndsWith": "*.txt",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/51fa4fab-5c80-43fb-9ac1-899a39056a05/resourceGroups/Cosmoslod28954037/providers/Microsoft.Storage/storageAccounts/anirasstprageacount",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
